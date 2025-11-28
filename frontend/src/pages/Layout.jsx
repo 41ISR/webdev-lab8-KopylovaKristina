@@ -1,7 +1,7 @@
 const Layout = () => {
     const { session } = useUserStore()
     return (
-            <h2 class="logo">🛒Маркетплейс</h2>
+            <><h2 class="logo">🛒Маркетплейс</h2>
                     {!session ? (
                         <ul class="nav-links" id="auth-nav">
                             <li>
@@ -26,25 +26,13 @@ const Layout = () => {
                                 <Link to={"/"} class="active">Товары</Link>
                             </li>
                             <li>
-                                <Link to={"/signin"}>Войти</Link>
+                                <Link to={"/login"}>Войти</Link>
                             </li>
                             <li>
                                 <Link to={"/register"} class="btn-primary">Регистрация</Link>
                             </li>
                         </ul>
-                    )}
-
-
-                    <main>
-                        <!-- Outlet - здесь будет рендериться содержимое дочерних маршрутов -->
-                        <div id="outlet">
-                            <!-- React Router Outlet заменит это содержимое -->
-                        </div>
-                    </main>
-
-                    <footer>
-                        <p>&copy; 2025 Маркетплейс. Все права защищены.</p>
-                    </footer>
+                    )}</>
        )
     }
 

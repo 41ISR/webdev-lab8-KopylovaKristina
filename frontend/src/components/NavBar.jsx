@@ -1,0 +1,35 @@
+import { Link } from 'react-router-dom'
+import { useUserStore } from '../store/useUserStore'
+
+const NavBar = () => {
+    const { session } = useUserStore()
+    
+    return (
+        <div className="navbar">
+            <div className="navbar-container">
+                <h2 className="navbar-brand">Маркетплейс</h2>
+                <ul className="navbar-nav">
+                    <li>
+                        <Link to={"/items"}>Домой</Link>
+                    </li>
+                    {!session ? (
+                        <li>
+                            <Link to={"/login"}>Войти</Link>
+                        </li>
+                    ) : (
+                        <>
+                        <li>
+                            <Link to={"/my-items"}>Мои товары</Link>
+                        </li>
+                        <li>
+                            <Link to={"/logout"}>Выйти</Link>
+                        </li>
+                        </>
+                    )}
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+export default NavBar
