@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { api } from "../api/api"
-import MessageCard from "./MessageCard"
-import { useMessageStore } from "../store/useMessageStore"
+import StoreCard from "./StoreCard"
+import { useStore } from "../store/useStore"
 import { useUserStore } from "../store/useUserStore"
 
 const Feed = ({ title = "Сообщения", myOwn = false }) => {
-    const { messages, getMessages } = useMessageStore()
+    const { messages, getMessages } = useStore()
     const [timerId, setTimerId] = useState(undefined)
     const {session} = useUserStore()
 
@@ -26,10 +26,10 @@ const Feed = ({ title = "Сообщения", myOwn = false }) => {
                     <div className="messages-grid">
                         {messages && myOwn ?
                         messages.filter((message) => message.userId == session.user.id).map((message, i) => (
-                            <MessageCard key={i} {...message} />
+                            <StoreCard key={i} {...message} />
                         ))
                         : messages.map((message, i) => (
-                            <MessageCard key={i} {...message} />
+                            <StoreCard key={i} {...message} />
                         ))}
                     </div>
                 </div>

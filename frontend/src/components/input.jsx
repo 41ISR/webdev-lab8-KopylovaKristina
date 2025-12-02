@@ -1,4 +1,4 @@
-const Input = (props) => {
+const input = (props) => {
     return (
         <div className="input-group">
             {props.label && <label htmlFor="" className="input-label">{props.label}</label>}
@@ -7,4 +7,4 @@ const Input = (props) => {
     )
 }
 
-export default Input
+export default input

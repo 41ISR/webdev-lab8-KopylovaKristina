@@ -1,3 +1,4 @@
+
 const Layout = () => {
     const { session } = useUserStore()
     return (
@@ -11,7 +12,7 @@ const Layout = () => {
                                 <Link to={"/my-bids"}>Мои ставки</Link>
                             </li>
                             <li>
-                                <Link to={/create-item} class="btn-primary">+Создать товар</Link>
+                                <Link to={"/create-item"} class="btn-primary">+Создать товар </Link>
                             </li>
                             <li class="user-info">
                                 <span class="username">username</span>

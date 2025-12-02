@@ -1,5 +1,5 @@
 import Feed from "../components/Feed"
-import Field from "../components/StoreField"
+import Field from "./StoreField"
 import { useUserStore } from "../store/useUserStore"
 
 const Board = () => {

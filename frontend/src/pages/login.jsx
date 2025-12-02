@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Button from "../components/Button"
-import Input from "../components/Input"
+import Input from "../components/input"
 import { api } from "../api/api"
 import { Link, useNavigate } from "react-router-dom"
 import { useUserStore } from "../store/useUserStore"
@@ -76,7 +76,7 @@ const SignIn = () => {
         <div class="auth-divider">или</div>
 
         <div class="auth-link">
-            Нет аккаунта? <a href="/SignUp">Зарегистрироваться</a>
+            Нет аккаунта? <a href="/register">Зарегистрироваться</a>
         </div>
     </div>
 

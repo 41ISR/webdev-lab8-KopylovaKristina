@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Input from "../components/Input"
+import input from "../components/input"
 import { api } from "../api/api"
 import { useNavigate } from "react-router-dom"
 import { useUserStore } from "../store/useUserStore"
@@ -36,7 +36,6 @@ const SignUp = () => {
     }
 
     return (
-
             <div class="auth-container">
                     <div class="auth-header">
                         <div class="auth-icon">👤</div>
@@ -51,7 +50,7 @@ const SignUp = () => {
                     <form id="register-form">
                         <div class="form-group">
                             <label class="form-label">Имя пользователя</label>
-                            <Input 
+                            <input 
                                 type="text" 
                                 class="form-input" 
                                 name="username"
@@ -66,7 +65,7 @@ const SignUp = () => {
 
                         <div class="form-group">
                             <label class="form-label">Email <span class="optional">(необязательно)</span></label>
-                            <Input 
+                            <input 
                                 type="email" 
                                 class="form-input" 
                                 name="email"
@@ -78,7 +77,7 @@ const SignUp = () => {
 
                         <div class="form-group">
                             <label class="form-label">Пароль</label>
-                            <Input 
+                            <input 
                                 type="password" 
                                 class="form-input" 
                                 name="password"
@@ -96,7 +95,7 @@ const SignUp = () => {
 
                         <div class="form-group">
                             <label class="form-label">Подтверждение пароля</label>
-                            <Input 
+                            <input 
                                 type="password" 
                                 class="form-input" 
                                 name="confirmPassword"
